@@ -11,7 +11,7 @@ export default function Home() {
       const response = await fetch('https://api-inference.huggingface.co/models/gpt2', {
         method: 'POST',
         headers: {
-          'Authorization': 'Bearer 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', // huggingface.co dan oling
+          'Authorization': `Bearer ${process.env.HUGGING_FACE_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
